@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Orders-->
         <scene sceneID="XYn-Xe-pFZ">
             <objects>
-                <tableViewController id="tLz-Dl-Omw" sceneMemberID="viewController">
+                <tableViewController id="tLz-Dl-Omw" customClass="OrdersTableViewController" customModule="CoffeeHouse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="On8-YX-IdZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,12 +31,65 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Orders" id="Bgy-yS-mO4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DGz-9j-7r3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DGz-9j-7r3">
+                            <connections>
+                                <segue destination="0rj-1W-zxe" kind="presentation" id="oeT-19-ntn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUG-Zw-4Gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="775.36231884057975" y="103.79464285714285"/>
+        </scene>
+        <!--Add New Order-->
+        <scene sceneID="4Ol-Hz-rWI">
+            <objects>
+                <viewController id="hrs-fB-qBW" customClass="AddOrderViewController" customModule="CoffeeHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="63b-mM-ccs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-0i-9i8">
+                                <rect key="frame" x="0.0" y="56" width="414" height="421"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-cS-Qcg">
+                                <rect key="frame" x="105" y="525" width="206" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-EX-2RH">
+                                <rect key="frame" x="142" y="628" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xv4-Da-FLo">
+                                <rect key="frame" x="142" y="689" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7lH-0i-9i8" firstAttribute="width" secondItem="63b-mM-ccs" secondAttribute="width" id="0P4-jC-ffc"/>
+                            <constraint firstItem="7lH-0i-9i8" firstAttribute="top" secondItem="9if-QC-FJf" secondAttribute="top" id="6es-Ou-naE"/>
+                            <constraint firstItem="7lH-0i-9i8" firstAttribute="height" secondItem="63b-mM-ccs" secondAttribute="height" multiplier="0.5" id="8my-7e-546"/>
+                            <constraint firstItem="7lH-0i-9i8" firstAttribute="leading" secondItem="9if-QC-FJf" secondAttribute="leading" id="vA7-w5-YoX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9if-QC-FJf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Order" id="er9-vG-tTn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FpW-js-K2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526.0869565217395" y="103.79464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cBN-q0-dIF">
@@ -54,6 +108,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egh-2z-7l4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-136.23188405797103" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PUg-o6-TU1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0rj-1W-zxe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SvL-lm-IiV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hrs-fB-qBW" kind="relationship" relationship="rootViewController" id="UeU-Fq-IyT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXJ-ox-U4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615.9420289855075" y="103.79464285714285"/>
         </scene>
     </scenes>
 </document>
