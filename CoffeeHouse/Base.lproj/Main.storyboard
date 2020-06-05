@@ -53,25 +53,38 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-0i-9i8">
                                 <rect key="frame" x="0.0" y="56" width="414" height="421"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Bec-aT-Hya">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bec-aT-Hya" id="3gW-ol-ZGu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-cS-Qcg">
-                                <rect key="frame" x="105" y="525" width="206" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-cS-Qcg">
+                                <rect key="frame" x="104" y="525" width="206" height="32"/>
                                 <segments>
                                     <segment title="Small"/>
                                     <segment title="Medium"/>
                                     <segment title="Large"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-EX-2RH">
-                                <rect key="frame" x="142" y="628" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-EX-2RH">
+                                <rect key="frame" x="107" y="628" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PeL-Mg-dYR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xv4-Da-FLo">
-                                <rect key="frame" x="142" y="689" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xv4-Da-FLo">
+                                <rect key="frame" x="107" y="689" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dt7-uS-Ybq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -81,11 +94,20 @@
                             <constraint firstItem="7lH-0i-9i8" firstAttribute="width" secondItem="63b-mM-ccs" secondAttribute="width" id="0P4-jC-ffc"/>
                             <constraint firstItem="7lH-0i-9i8" firstAttribute="top" secondItem="9if-QC-FJf" secondAttribute="top" id="6es-Ou-naE"/>
                             <constraint firstItem="7lH-0i-9i8" firstAttribute="height" secondItem="63b-mM-ccs" secondAttribute="height" multiplier="0.5" id="8my-7e-546"/>
+                            <constraint firstItem="Yzb-EX-2RH" firstAttribute="centerX" secondItem="63b-mM-ccs" secondAttribute="centerX" id="McM-z6-BW1"/>
+                            <constraint firstItem="Xv4-Da-FLo" firstAttribute="top" secondItem="Yzb-EX-2RH" secondAttribute="bottom" constant="27" id="aRa-Ij-VlT"/>
+                            <constraint firstItem="CFI-cS-Qcg" firstAttribute="centerX" secondItem="63b-mM-ccs" secondAttribute="centerX" id="as9-Jk-8RM"/>
+                            <constraint firstItem="Yzb-EX-2RH" firstAttribute="top" secondItem="CFI-cS-Qcg" secondAttribute="bottom" constant="72" id="lrn-Oe-CvX"/>
+                            <constraint firstItem="CFI-cS-Qcg" firstAttribute="top" secondItem="7lH-0i-9i8" secondAttribute="bottom" constant="48" id="t8o-cL-rzg"/>
                             <constraint firstItem="7lH-0i-9i8" firstAttribute="leading" secondItem="9if-QC-FJf" secondAttribute="leading" id="vA7-w5-YoX"/>
+                            <constraint firstItem="Xv4-Da-FLo" firstAttribute="centerX" secondItem="63b-mM-ccs" secondAttribute="centerX" id="y7p-ot-vzq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9if-QC-FJf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Order" id="er9-vG-tTn"/>
+                    <navigationItem key="navigationItem" title="Add New Order" id="er9-vG-tTn">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="YMx-3e-2Z6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="CpT-yb-LIE"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpW-js-K2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
