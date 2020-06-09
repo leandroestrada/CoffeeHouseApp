@@ -8,22 +8,31 @@
 
 import Foundation
 
-enum CoffeType: String, Codable{
-    case cappucino
+enum CoffeeType: String, Codable{
+    
+    case cappuccino
     case latte
-    case espresso
+    case Espresso
     case cortado
+    
 }
 
 enum CoffeeSize: String, Codable{
+    
     case small
     case medium
     case large
+
 }
 
 struct Order: Codable{
+    
     let name: String
     let email: String
-    let type: CoffeType
+    let type: CoffeeType
     let size: CoffeeSize
+    
 }
+
+
+

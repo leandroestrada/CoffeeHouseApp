@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30442304248F0F2F00DD0561 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30442303248F0F2F00DD0561 /* OrderViewModel.swift */; };
 		3055AA032488425B00623FF6 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3055AA022488425B00623FF6 /* OrdersTableViewController.swift */; };
 		3055AA052488428300623FF6 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3055AA042488428300623FF6 /* AddOrderViewController.swift */; };
 		30911998248C86F3002822F5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911997248C86F3002822F5 /* Order.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30442303248F0F2F00DD0561 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		3055AA022488425B00623FF6 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
 		3055AA042488428300623FF6 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		30911997248C86F3002822F5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30442302248F0F1800DD0561 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				30442303248F0F2F00DD0561 /* OrderViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		30911996248C86DC002822F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		30F9E2592487449C007D066E /* CoffeeHouse */ = {
 			isa = PBXGroup;
 			children = (
+				30442302248F0F1800DD0561 /* View Models */,
 				30911996248C86DC002822F5 /* Models */,
 				30D10121248AF13900A11B69 /* Services */,
 				30F9E26E24874595007D066E /* Controllers */,
@@ -176,6 +187,7 @@
 				30F9E25D2487449C007D066E /* SceneDelegate.swift in Sources */,
 				3055AA032488425B00623FF6 /* OrdersTableViewController.swift in Sources */,
 				30D10123248AF14A00A11B69 /* WebService.swift in Sources */,
+				30442304248F0F2F00DD0561 /* OrderViewModel.swift in Sources */,
 				3055AA052488428300623FF6 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
